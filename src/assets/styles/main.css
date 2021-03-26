@@ -1,0 +1,41 @@
+body {
+  background-color: #121420;
+}
+
+.main {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #EF5B5B;
+  font-family: roboto;
+  font-weight: 100;
+  font-size: 7rem;
+}
+
+input {
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+button {
+  margin-top: 3rem;
+  border: 0;
+  border-radius: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #EF5B5B;
+  color: #121420;
+}
+
+/*# sourceMappingURL=main.css.map */
