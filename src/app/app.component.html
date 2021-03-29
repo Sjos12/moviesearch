@@ -4,8 +4,9 @@
         <input #searchBar (input)="getInput(searchBar.value)">
         <button type="button" (click)="onSubmit()">Go</button>
      </form>  
-     <div class="filmcontainer">
+     <div class="filmcontainer" *ngIf="movieObj != null">
         <h2>{{ movieObj.Title }}</h2>
         <p>{{movieObj.Plot }}</p>
+        <img src="{{ movieObj.Poster }}" alt="movieposter">
      </div>
 </div>
