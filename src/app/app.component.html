@@ -1,5 +1,11 @@
 <div class="main">
     <h1>Search for movie</h1>
-    <input type="text" name="" id="">
-    <button type="submit">Go</button>
+    <form>
+        <input #searchBar (input)="getInput(searchBar.value)">
+        <button type="button" (click)="onSubmit()">Go</button>
+     </form>  
+     <div class="filmcontainer">
+        <h2>{{ movieObj.Title }}</h2>
+        <p>{{movieObj.Plot }}</p>
+     </div>
 </div>
