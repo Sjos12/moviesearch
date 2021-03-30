@@ -1,12 +1,14 @@
-<div class="main">
-    <h1>Search for movie</h1>
-    <form>
-        
-        <button type="button" (click)="onSubmit()">Surprise me</button>
-     </form>  
-     <div class="filmcontainer" *ngIf="movieObj != null">
-        <h2>{{ movieObj.Title }}</h2>
-        <p>{{movieObj.Plot }}</p>
-        <img src="{{ movieObj.Poster }}" alt="movieposter">
-     </div>
+<div class="container">
+   <div class="main">
+      <h1>Bored? <br> Watch a Movie.</h1>
+      <hr>
+      <button type="button" (click)="onSubmit()">Surprise me</button>
+   
+         <div class="filmcontainer main" *ngIf="movieObj != null">
+         <h2>{{ movieObj.Title }}</h2>
+         <p>{{movieObj.Plot }}</p>
+         <img src="{{ movieObj.Poster }}" alt="movieposter">
+      </div>
+   </div>
 </div>
+
