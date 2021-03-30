@@ -26,7 +26,7 @@ export class AppComponent {
   }
 
   getInput(input: any) { 
-    this.appservice.moviename = input;
+    //this.appservice.moviename = input;
   };
   
 }

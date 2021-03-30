@@ -8,17 +8,23 @@ import { catchError, retry } from 'rxjs/operators';
 export class AppService {
   constructor(private http: HttpClient) { }
 
-    url: string = "http://www.omdbapi.com/?apikey=e6d414fb&";
-    moviename : string;
+    url: string = "http://www.omdbapi.com/?apikey=e6d414fb";
     movie: Movie;
+    movieID: string = '';
 
     onSubmit() {
-        this.url = "http://www.omdbapi.com/?apikey=e6d414fb&t=" + this.moviename;
-        console.log(this.url);
+        for(let i = 0; i < 7; i++) {
+          this.movieID += Math.floor(Math.random()*9).toString();
+        }
+        
+        this.url = "http://www.omdbapi.com/?apikey=e6d414fb&i=tt" + this.movieID;
+        
         this.http.get(this.url).subscribe((movieObj) => {
-          this.movie =JSON.parse(JSON.stringify(movieObj));
+          this.movie = JSON.parse(JSON.stringify(movieObj));
+            
           return this.movie;
         })
+        this.movieID = '';
         return this.http.get(this.url);
     };
    
