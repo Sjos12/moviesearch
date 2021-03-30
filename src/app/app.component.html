@@ -1,8 +1,8 @@
 <div class="main">
     <h1>Search for movie</h1>
     <form>
-        <input #searchBar (input)="getInput(searchBar.value)">
-        <button type="button" (click)="onSubmit()">Go</button>
+        
+        <button type="button" (click)="onSubmit()">Surprise me</button>
      </form>  
      <div class="filmcontainer" *ngIf="movieObj != null">
         <h2>{{ movieObj.Title }}</h2>

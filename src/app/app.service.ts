@@ -17,14 +17,20 @@ export class AppService {
           this.movieID += Math.floor(Math.random()*9).toString();
         }
         
-        this.url = "http://www.omdbapi.com/?apikey=e6d414fb&i=tt" + this.movieID;
-        
         this.http.get(this.url).subscribe((movieObj) => {
           this.movie = JSON.parse(JSON.stringify(movieObj));
-            
-          return this.movie;
+          
+          if (this.movie.Response == "False") {
+            this.movieID = '';
+            for(let i = 0; i < 7; i++) {
+              this.movieID += Math.floor(Math.random()*9).toString();
+            }
+          }  
+          this.url = "http://www.omdbapi.com/?apikey=e6d414fb&i=tt" + this.movieID + "&type=movie";
+          return this.movieID;
         })
-        this.movieID = '';
+        console.log(this.url)
+        
         return this.http.get(this.url);
     };
    
