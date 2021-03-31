@@ -11,8 +11,11 @@ export class AppComponent {
   appservice: AppService;
   movieObject: any;
   movieObj: any;
+  isDisplayingMovie: boolean = true;
+
   constructor (private _appservice: AppService){ 
     this.appservice = _appservice;
+    
   }
 
   ngOnInit() : void  { 
@@ -22,6 +25,7 @@ export class AppComponent {
   onSubmit() {
     this.appservice.onSubmit().subscribe( (movieobject) => {
       this.movieObj = movieobject;
+      this.isDisplayingMovie = false;
     })
   }
 

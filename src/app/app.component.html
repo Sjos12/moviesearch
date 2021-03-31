@@ -1,14 +1,19 @@
 <div class="container">
-   <div class="main">
+   <div class="">
       <h1>Bored? <br> Watch a Movie.</h1>
-      <hr>
+      
       <button type="button" (click)="onSubmit()">Surprise me</button>
    
-         <div class="filmcontainer main" *ngIf="movieObj != null">
+      <div class="moviecontainer" id="moviecontainer" [className]="isDisplayingMovie ? 'moviecontainer-closed' : 'moviecontainer-open'">
          <h2>{{ movieObj.Title }}</h2>
          <p>{{movieObj.Plot }}</p>
          <img src="{{ movieObj.Poster }}" alt="movieposter">
       </div>
+         <!--<div class=" " *ngIf="movieObj != null">
+         <h2>{{ movieObj.Title }}</h2>
+         <p>{{movieObj.Plot }}</p>
+         <img src="{{ movieObj.Poster }}" alt="movieposter">
+      </div>-->
    </div>
 </div>
 

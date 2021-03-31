@@ -11,7 +11,8 @@ hr {
   background-color: #EF5B5B;
   height: 1px;
   width: 50%;
-  margin-left: 0;
+  margin-left: auto;
+  margin-right: auto;
   border: 0;
 }
 
@@ -31,6 +32,7 @@ h1 {
   font-weight: bold;
   font-size: 7rem;
   margin: 0;
+  text-align: center;
 }
 
 input {
@@ -47,15 +49,47 @@ button {
   border-radius: 5px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   background-color: #EF5B5B;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #121420;
+  margin: 0 auto;
+  display: block;
 }
 
 body {
   color: #EF5B5B;
+}
+
+.moviecontainer-closed {
+  position: absolute;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  height: 0%;
+  width: 50vw;
+  top: 100%;
+  overflow: hidden;
+  background-color: #000;
+  color: #FFF;
+  transition: all 1s;
+  background-color: #34252F;
+}
+
+.moviecontainer-open {
+  border-radius: 10px;
+  transition: all 1s;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  height: 100%;
+  width: 80vw;
+  overflow: hidden;
+  background-color: #34252F;
+  margin-bottom: 2rem;
 }
 
 .filmcontainer {
