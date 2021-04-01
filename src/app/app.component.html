@@ -5,9 +5,11 @@
       <button type="button" (click)="onSubmit()">Surprise me</button>
    
       <div class="moviecontainer" id="moviecontainer" [className]="isDisplayingMovie ? 'moviecontainer-closed' : 'moviecontainer-open'">
-         <h2>{{ movieObj.Title }}</h2>
-         <p>{{movieObj.Plot }}</p>
-         <img src="{{ movieObj.Poster }}" alt="movieposter">
+         <div class="container" *ngIf="movieObj != null">
+            <h2>{{ movieObj.Title }}</h2>
+            <p>{{movieObj.Plot }}</p>
+            <img src="{{ movieObj.Poster }}" alt="movieposter">
+         </div>
       </div>
          <!--<div class=" " *ngIf="movieObj != null">
          <h2>{{ movieObj.Title }}</h2>
